@@ -1,12 +1,11 @@
 import React from "react";
 import MainTemplate from "./MainTemplate/MainTemplate";
-
+import Form from "components/Form/Form";
+import Success from "components/Success/Success";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "assets/styles/globalStyles";
 import { theme } from "assets/styles/theme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Form from "components/Form/Form";
-import Success from "components/Success/Success";
 import { useState, useEffect } from "react";
 
 const Root = () => {
