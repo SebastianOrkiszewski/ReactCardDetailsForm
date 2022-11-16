@@ -3,7 +3,7 @@ import React from "react";
 import { Wrapper, WrapperMini, Label, Button } from "./Form.styles";
 
 
-const Form = () => {
+const Form = ({ formValues, limitCharacters, handleChange, formErrors, setFormErrors, validate, setIsSubmit, isSubmit}) => {
   
   const navigate = useNavigate();
 
@@ -14,7 +14,14 @@ const Form = () => {
       } 
   }
 
- 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const currentFormErrors = validate(formValues);
+    setFormErrors(currentFormErrors);
+    successPage(currentFormErrors);
+    
+  }
 
   return (
     <Wrapper onSubmit={handleSubmit}>

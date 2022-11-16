@@ -52,10 +52,10 @@ const Root = () => {
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <MainTemplate >
+        <MainTemplate formValues={formValues} >
           <Routes>
-            <Route exact path="/" element={<Form />} />
-            <Route exact path="/success" element={<Success />} />
+          <Route exact path="/" element={<Form formValues={formValues} limitCharacters={limitCharacters} handleChange={handleChange} formErrors={formErrors} setIsSubmit={setIsSubmit} validate={validate} setFormErrors={setFormErrors}  isSubmit={isSubmit} />} />
+            <Route exact path="/success" element={<Success resetForm={resetForm} />} />
           </Routes>
         </MainTemplate>
       </ThemeProvider>

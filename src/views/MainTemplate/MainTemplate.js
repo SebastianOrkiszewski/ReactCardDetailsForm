@@ -7,17 +7,17 @@ import {
 import FrontCard from "components/FrontCard/FrontCard";
 import BackCard from "components/BackCard/BackCard";
 
-const MainTemplate = () => {
+const MainTemplate = ({children, formValues}) => {
   
   return (
     <Wrapper>
       <LeftWrapper>
       
-          <FrontCard />
-          <BackCard  />
+          <FrontCard formValues={formValues} />
+          <BackCard formValues={formValues} />
         
       </LeftWrapper>
-      <RightWrapper></RightWrapper>
+      <RightWrapper>{children}</RightWrapper>
     </Wrapper>
   );
 };
