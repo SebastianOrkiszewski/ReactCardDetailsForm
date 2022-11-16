@@ -30,6 +30,11 @@ export const Wrapper = styled.div`
     max-width: 530px;
     transform: translate(40%, 0%);
   }
+  @media screen and (min-width: 2100px) {
+    width: 80%;
+    max-width: 530px;
+    transform: translate(65%, 0%);
+  }
 `;
 export const CardImg = styled.img`
   width: 100%;
