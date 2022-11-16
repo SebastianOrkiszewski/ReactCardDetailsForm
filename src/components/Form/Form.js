@@ -5,7 +5,16 @@ import { Wrapper, WrapperMini, Label, Button } from "./Form.styles";
 
 const Form = () => {
   
-  
+  const navigate = useNavigate();
+
+  const successPage = (formErrors) => {
+
+    if (Object.keys(formErrors).length === 0)  {
+      navigate('/success');
+      } 
+  }
+
+ 
 
   return (
     <Wrapper onSubmit={handleSubmit}>
