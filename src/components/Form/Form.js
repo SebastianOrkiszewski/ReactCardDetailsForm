@@ -24,7 +24,10 @@ const Form = () => {
         id="name"
         type="text"
         placeholder="e.g. Jane Appleseed"
-        
+        value={formValues.name}
+        onChange={handleChange}
+        onInput={(e) => limitCharacters(e, 35)}
+        error={formErrors.name}
       />
       
       <FormField
@@ -33,14 +36,17 @@ const Form = () => {
         id="name"
         type="text"
         placeholder="e.g. 1234 5678 9123 0000"
+        value={formValues.cardNumber}
+        onChange={handleChange}
+        error={formErrors.cardNumber}
         />
 
       <WrapperMini>
         <Label htmlFor="id">
           Exp. Date (MM/YY)
           <WrapperMini>
-            <FormField name="month" id="name" type="number" placeholder="MM"  />
-            <FormField name="year" id="name" type="number" placeholder="YY"  />
+            <FormField name="month" id="name" type="number" placeholder="MM" value={formValues.month} onChange={handleChange} onInput={(e) => limitCharacters(e, 2) } error={formErrors.month} />
+            <FormField name="year" id="name" type="number" placeholder="YY" value={formValues.month} onChange={handleChange} onInput={(e) => limitCharacters(e, 2) } error={formErrors.month} />
           </WrapperMini>
         </Label>
         <FormField
@@ -49,6 +55,9 @@ const Form = () => {
           id="number"
           type="number"
           placeholder="e.g. 123"
+          value={formValues.cvc}
+          onChange={handleChange}
+          error={formErrors.cvc}
           
         />
       </WrapperMini>
