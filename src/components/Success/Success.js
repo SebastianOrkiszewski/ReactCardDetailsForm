@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "assets/images/icon-complete.svg"
-import { Wrapper, Button } from "views/Success/Success.styles";
+import { Wrapper, Button } from "components/Success/Success.styles";
 import { Link } from 'react-router-dom';
 
 const Success = () => {
