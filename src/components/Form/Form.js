@@ -1,9 +1,10 @@
 import FormField from "components/FormField/FormField";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Wrapper, WrapperMini, Label, Button } from "./Form.styles";
 
 
-const Form = ({ formValues, limitCharacters, handleChange, formErrors, setFormErrors, validate, setIsSubmit, isSubmit}) => {
+const Form = ({ formValues, limitCharacters, handleChange, formErrors, setFormErrors, validate}) => {
   
   const navigate = useNavigate();
 
@@ -52,8 +53,8 @@ const Form = ({ formValues, limitCharacters, handleChange, formErrors, setFormEr
         <Label htmlFor="id">
           Exp. Date (MM/YY)
           <WrapperMini>
-            <FormField name="month" id="name" type="number" placeholder="MM" value={formValues.month} onChange={handleChange} onInput={(e) => limitCharacters(e, 2) } error={formErrors.month} />
-            <FormField name="year" id="name" type="number" placeholder="YY" value={formValues.month} onChange={handleChange} onInput={(e) => limitCharacters(e, 2) } error={formErrors.month} />
+          <FormField name="month" id="name" type="number" placeholder="MM" value={formValues.month} onChange={handleChange} onInput={(e) => limitCharacters(e, 2) } error={formErrors.month} />
+            <FormField name="year" id="name" type="number" placeholder="YY" value={formValues.year} onChange={handleChange} onInput={(e) => limitCharacters(e, 2)} error={formErrors.year} />
           </WrapperMini>
         </Label>
         <FormField
