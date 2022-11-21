@@ -30,6 +30,8 @@ export const LeftWrapper = styled.div`
   @media screen and (min-width: 768px) {
     width: 80%;
     height: 100vh;
+    align-items: flex-end;
+    
     background-repeat: round;
   }
 `;

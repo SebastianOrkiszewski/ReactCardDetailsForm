@@ -10,33 +10,17 @@ export const Wrapper = styled.div`
   transition-duration: 0.5s;
   transform: translate(15%, -60%);
 
-  @media screen and (min-width: 390px) {
-    transform: translate(15%, -40%);
-  }
-  @media screen and (min-width: 585px) {
-    transform: translate(15%, -40%);
-  }
   @media screen and (min-width: 768px) {
-    width: 80%;
+    width: 70%;
     min-width: 300px;
     max-width: 530px;
-    transform: translate(15%, 5%);
+    transform: translate(18%, 5%);
   }
-  @media screen and (min-width: 900px) {
-    width: 80%;
+  @media screen and (min-width: 1000px) {
+    width: 70%;
     min-width: 300px;
-    max-width: 530px;
+    max-width: 730px;
     transform: translate(40%, 5%);
-  }
-  @media screen and (min-width: 1200px) {
-    width: 80%;
-    max-width: 530px;
-    transform: translate(60%, 5%);
-  }
-  @media screen and (min-width: 2100px) {
-    width: 80%;
-    max-width: 530px;
-    transform: translate(90%, 5%);
   }
 `;
 
@@ -45,26 +29,16 @@ export const NumberCard = styled.p`
   color: ${({ theme }) => theme.colors.white};
   top: 31%;
   left: 77%;
-
   font-size: 4vw;
+
   @media screen and (min-width: 768px) {
-    top: 30%;
-    left: 77%;
-    font-size: 2vw;
-  }
-  @media screen and (min-width: 768px) {
-    top: 30%;
-    left: 77%;
-    font-size: 2vw;
-  }
-  @media screen and (min-width: 1400px) {
     top: 29%;
-    left: 77%;
-    font-size: 1.8vw;
+    left: 75%;
+    font-size: 1.2em;
   }
-  @media screen and (min-width: 2000px) {
-    top: 29%;
-    left: 77%;
-    font-size: 1.3vw;
+  @media screen and (min-width: 1000px) {
+    top: 31%;
+    left: 75%;
+    font-size: 1.6vw;
   }
 `;
